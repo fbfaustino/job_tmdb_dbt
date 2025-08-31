@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: avaliacoes
+    description: "Tabela de avaliacoes de filmes"
+    columns:
+      - name: imdb_id
+        description: "Identificador único do imdb"
+        tests:
+          - not_null
+          - unique
+
+  - name: detalhes_filmes
+    description: "Tabela com detalhes dos filmes"
+    columns:
+      - name: id_filme
+        description: "Identificador único do filme"
+        tests:
+          - not_null
+          - unique
+
+
+  - name: filmes
+    description: "Tabela principal de filmes"
+    columns:
+      - name: id_filme
+        description: "Identificador único do filme"
+        tests:
+          - not_null
+          - unique
+
+  - name: generos_filmes
+    description: "Tabela que relaciona filmes e seus gêneros"
+    columns:
+      - name: id_filme
+        description: "Identificador único do filme"
+        tests:
+          - not_null
+          - unique
+
+  - name: pais_producao
+    description: "Tabela de países de produção dos filmes"
+    columns:
+      - name: id_filme
+        description: "Identificador único do filme"
+        tests:
+          - not_null
+          - unique
+
+  - name: palavras_chaves
+    description: "Tabela de palavras-chave associadas aos filmes"
+    columns:
+      - name: id_filme
+        description: "Identificador único do filme"
+        tests:
+          - not_null
+          - unique
+
+  - name: produtora
+    description: "Tabela de produtoras responsáveis pelos filmes"
+    columns:
+      - name: id_filme
+        description: "Identificador único do filme"
+        tests:
+          - not_null
+          - unique

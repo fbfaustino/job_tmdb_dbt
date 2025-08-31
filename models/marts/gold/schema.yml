@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: tab_filmes
+    description: "Tabela de filmes"
+    columns:
+      - name: id_filme
+        description: "Identificador único do filme"
+        tests:
+          - not_null
+          - unique
+  - name: filmes_sentimentos
+    description: "Tabela de sentimentos relacionados a filmes"
+    columns:
+      - name: id_filme
+        description: "Identificador único do filme"
+        tests:
+          - not_null
+          - unique

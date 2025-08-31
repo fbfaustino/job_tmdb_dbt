@@ -1,0 +1,35 @@
+name: "job_tmdb_dbt"
+version: "1.0.0"
+
+profile: "job_tmdb_dbt"
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  job_tmdb_dbt:
+    staging:
+      +materialized: view
+      +schema: tmdb_bronze
+    intermediate:
+      +materialized: view
+      +schema: tmdb_bronze
+    marts:
+      +materialized: table
+      silver:
+        +schema: tmdb_silver
+      gold:
+        +schema: tmdb_gold 
+      
+  
+  
+flags:
+  use_materialization_v2: true

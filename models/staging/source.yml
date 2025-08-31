@@ -1,0 +1,33 @@
+sources:
+  - name: tmdb_bronze
+    database: TMDB
+    schema: tmdb_bronze
+    description: "Fonte de dados da camada silver do snowflake"
+    tables:
+      - name: filmes
+        description: "Dados com todos os filmes da API TMDB"
+      - name: comentarios
+        description: "comentarios de usuarios sobre os filmes"
+      - name: generos_filme
+        description: "generos de cada filme"
+      - name: generos
+        description: "codigos dos generos de filmes"  
+      - name: produtores
+        description: "Lista de pais produtor e empresa produtora do filme"
+      - name: recomendacoes
+        description: "Lista de filmes semelhantes com base no tmdb"
+      - name: avaliacoes
+        description: "Quantidade e valor das avaliacoes de filmes"
+      - name: detalhes_filmes
+        description: "Detalhes dos filmes, incluindo idioma original e título original"
+      - name: pais_produtor
+        description: "Códigos do país produtor"
+      - name: produtora
+        description: "Códigos das produtoras de filmes"
+      - name: palavras_chave
+        description: "Palavras-chave associadas aos filmes"
+      - name: info_extras_filmes
+        description: "Informacoes adicionais sobre filmes"
+
+      - name: sentimentos
+        description: "Analise de sentimentos dos filmes"
